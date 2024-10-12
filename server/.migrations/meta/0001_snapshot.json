@@ -1,0 +1,100 @@
+{
+  "id": "3a414483-b82c-45c3-85b8-bd72a0957bfb",
+  "prevId": "e33e32ab-3fbc-4fb8-8a1f-d0a03e0e37df",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.completed_goals": {
+      "name": "completed_goals",
+      "schema": "",
+      "columns": {
+        "completed_goals_id": {
+          "name": "completed_goals_id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "goal_id": {
+          "name": "goal_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "completed_goals_title": {
+          "name": "completed_goals_title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "completed_goals_at": {
+          "name": "completed_goals_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "completed_goals_goal_id_goals_id_fk": {
+          "name": "completed_goals_goal_id_goals_id_fk",
+          "tableFrom": "completed_goals",
+          "tableTo": "goals",
+          "columnsFrom": [
+            "goal_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.goals": {
+      "name": "goals",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "title": {
+          "name": "title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "desired_weekly_frequency": {
+          "name": "desired_weekly_frequency",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
