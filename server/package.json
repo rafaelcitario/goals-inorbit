@@ -4,6 +4,14 @@
   "description": "nwl fullstack 3days-bootcamp",
   "main": "index.js",
   "scripts": {
+    "drizzle:migrate": "drizzle-kit migrate",
+    "drizzle:generate": "drizzle-kit generate",
+    "drizzle:studio": "drizzle-kit studio",
+    "drizzle:push": "drizzle-kit push",
+    "drizzle:check": "drizzle-kit check",
+    "drizzle:up": "drizzle-kit up",
+    "drizzle:drop": "drizzle-kit drop",
+    "drizzle:introspect": "drizzle-kit introspect",
     "dev": "tsx --env-file=.env --watch src/http/server.ts",
     "test": "jest"
   },
@@ -32,6 +40,7 @@
     "drizzle-orm": "^0.34.1",
     "express": "^4.21.1",
     "lodash": "^4.17.21",
+    "postgres": "^3.4.4",
     "zod": "^3.23.8"
   }
 }
