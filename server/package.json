@@ -13,12 +13,15 @@
     "drizzle:drop": "drizzle-kit drop",
     "drizzle:introspect": "drizzle-kit introspect",
     "dev": "tsx --env-file=.env --watch src/http/server.ts",
-    "test": "jest"
+    "seed": "tsx --env-file=.env src/db/seed.ts",
+    "test": "jest",
+    "lint": "eslint src/ *.ts --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.12.0",
     "@swc/cli": "^0.4.1-nightly.20240914",
     "@swc/core": "^1.7.35",
     "@swc/jest": "^0.2.36",
@@ -26,15 +29,13 @@
     "@types/jest": "^29.5.13",
     "@types/lodash": "^4.17.10",
     "drizzle-kit": "^0.25.0",
-    "eslint": "^8.57.1",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.6.0",
+    "eslint": "^9.12.0",
+    "globals": "^15.11.0",
     "jest": "^29.7.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.1",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.8.1"
   },
   "dependencies": {
     "drizzle-orm": "^0.34.1",
