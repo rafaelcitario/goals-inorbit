@@ -3,8 +3,8 @@ import { completedGoals, goals } from './schema';
 
 
 export async function seed (): Promise<void> {
-  await database.delete(goals);
   await database.delete(completedGoals);
+  await database.delete(goals);
   const databaseTasks = await database.insert(goals).values([
     { title: 'acordar as 05h da manhã', desiredWeeklyFrequency: 5 },
     { title: 'Pegar o onibus das 11h50', desiredWeeklyFrequency: 5 },

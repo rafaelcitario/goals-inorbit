@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { createRoute } from "./create_routes/create.routes";
+import { createGoalsController } from "../controllers/createGoals.controller";
+
 export const router = Router();
-router.post('/new', [
-  createRoute,
+router.post('/goals', [
+  createGoalsController,
 ])
 
 
