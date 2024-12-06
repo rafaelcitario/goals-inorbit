@@ -40,7 +40,7 @@
   "dependencies": {
     "dayjs": "^1.11.13",
     "drizzle-orm": "^0.34.1",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "lodash": "^4.17.21",
     "postgres": "^3.4.4",
     "zod": "^3.23.8"
